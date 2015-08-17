@@ -1,2 +1,8 @@
-<h1>Site#index</h1>
-<p>Find me in app/views/site/index.html.erb</p>
+<% @news.each do |news| %>
+	<h1><%= news.title %></h1>
+	<h4><%= news.body %></h4>
+	<p><%= news.link_url %></p>
+  
+<!--   HTTParty.get("http://api.nytimes.com/svc/search/v2/articlesearch")
+ -->
+  <% end %>
