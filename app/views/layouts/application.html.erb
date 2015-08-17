@@ -11,38 +11,8 @@
 </head>
 <body>
 
-<nav id="nav" class="navbar navbar-default">
-		  <div class="container-fluid">
-		    <!-- Brand and toggle get grouped for better mobile display -->
-		    <div class="navbar-header">
-		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		      <a class="navbar-brand logo" href="/">newsly.</a>
-		    </div>
-		    		    <!-- Collect the nav links, forms, and other content for toggling -->
-		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		      <ul class="nav navbar-nav navbar-right">
-
-		      	<% if @current_user %> 
-                   <span class="nav"><%= link_to "Hi  " + @current_user.first_name.capitalize + "!", '/profile' %>  
-                   <%= link_to "Log out", logout_path %></span>
-                     <% else %>
-		                 <button role="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#signupModal">
-				      	Signup
-				      	</button>
-				      	<button role="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#loginModal">
-				      	Login
-				      	</button>
-                    <% end %> 
-
-		      </ul>
-		    </div><!-- /.navbar-collapse -->
-		  </div><!-- /.container-fluid -->
-		</nav>
+<!-- shared nav-bar -->
+<%= render "shared/navbar" %>
 
 
 <%= yield %>
