@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
  
 
+  get 'news/show'
+
  root "site#index"
 # users routes homie
  get "/signup", to: "users#new"

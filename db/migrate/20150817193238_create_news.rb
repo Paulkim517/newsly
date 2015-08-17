@@ -3,7 +3,7 @@ class CreateNews < ActiveRecord::Migration
     create_table :news do |t|
       t.string :title
       t.string :body
-      t.string :link_url
+      t.string :url
 
       t.timestamps null: false
     end

@@ -3,9 +3,9 @@
 one:
   title: MyString
   body: MyString
-  link_url: MyString
+  url: MyString
 
 two:
   title: MyString
   body: MyString
-  link_url: MyString
+  url: MyString
