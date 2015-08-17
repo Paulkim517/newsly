@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
  
-
-
+ get 'news/show'
+ 
  root "site#index"
-# users routes homie
+ #users routes homie
  get "/signup", to: "users#new"
  get "/profile", to: "users#show"
  resources :users, only: [:create]
@@ -12,9 +12,6 @@ Rails.application.routes.draw do
  get "/login", to: "sessions#new"
  post "/logout", to: "sessions#destroy"
  resources :sessions, only: [:create]
-
- #
-
 
 end
 

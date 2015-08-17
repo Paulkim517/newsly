@@ -1,9 +1,9 @@
+<div class="well" id="news-feed">
+<h1>Latest News:</h1>
+</div>
+<% @response.each do |i| %>
 
+<%= @title %>
+<%= @body %>
 
-		<script>
-		// Provide your access token
-		L.mapbox.accessToken = '<your access token here>';
-		// Create a map in the div #map
-		L.mapbox.map('map', 'mapbox.streets');
-		</script>
-
+<% end %>
