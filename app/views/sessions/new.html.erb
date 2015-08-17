@@ -1,0 +1,11 @@
+<div class="col-sm-4 col-sm-offset-4">
+  <legend>Log In</legend>
+  <%= form_for :user, url: sessions_path do |f| %>
+     <%= f.label :email %>:
+     <%= f.email_field :email, class:"form-control" %><br />
+     <%= f.label :password %>:
+     <%= f.password_field :password, class:"form-control" %><br />
+     <%= f.submit "Log In", class:"btn btn-primary" %>
+  <% end %>
+</div>
+
