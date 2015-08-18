@@ -17,5 +17,16 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
   helper_method :require_auth
+  helper_method :results
+  helper_method :geo
+  
+  def results
+    @results = HTTParty.get('http://api.nytimes.com/svc/topstories/v1/national.json?api-key=b7d44ad17cc1da6bd24cdfc172b20a81:5:72707211')  
+  end
+
+  def geo
+    @geo = results['results'][0]['geo_facet'][0]
+    
+  end 
 
 end

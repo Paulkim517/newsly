@@ -21,7 +21,7 @@ $(function(){
         coordinates: [lng, lat]
       },
       properties: {
-        description: + results.title,
+        description:  "hello world",
         'marker-size': 'small',
         'marker-color': '#fc4607',
         'marker-symbol': 'star'
@@ -30,14 +30,24 @@ $(function(){
   };
 
 
-geocoder.query(results.geo_facet, function(err, result) {
-        if (!err) {
-          showMarker(result.latlng[1], result.latlng[0], result.title, results.abstract);
-        }
-      });
-  
 
+  $.get("/results.json",function(data){
+    console.log(data)
+    for (var i = 0; i < data.results.length; i++) {
+      console.log(data.results[i].geo_facet[0])
+      var location = data.results[i].geo_facet[0]
+      if(location !== undefined){
+        geocoder.query(data.results[i].geo_facet[0], function(err, geo) {
+          if (!err) {
+            showMarker(geo.latlng[1], geo.latlng[0]);
+          }
+        });
+      }
+            
+      
+    };
 
+  });
 
 
 });

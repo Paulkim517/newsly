@@ -14,6 +14,9 @@ Rails.application.routes.draw do
  post "/logout", to: "sessions#destroy"
  resources :sessions, only: [:create]
 
+ #results
+ get "/results", to: "site#index"
+
 
 end
 
