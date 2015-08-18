@@ -4,8 +4,8 @@ $(function(){
   L.mapbox.accessToken = 'pk.eyJ1Ijoic2FoYXNoMTgyIiwiYSI6IjJhNGNjYzNiMTRmMGQ5MjkwYjcwMmEwY2IwYjkxMDk5In0.9d5E9GnR78TIUvQnjUrGxw';
   var map = L.mapbox.map('map', 'sahash182.n6o0oh90', {
             center: [34, -97],
-            zoom: 4,
-            minZoom: 3,
+            zoom: 2,
+            minZoom: 2,
             maxBounds: [[-90, -180], [90, 180]]
   });
 
@@ -21,7 +21,7 @@ $(function(){
         coordinates: [lng, lat]
       },
       properties: {
-        description: '' + results.title,
+        description: + results.title,
         'marker-size': 'small',
         'marker-color': '#fc4607',
         'marker-symbol': 'star'

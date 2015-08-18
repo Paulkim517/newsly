@@ -1,2 +1,22 @@
-<h1>User#show</h1>
-<p>Find me in app/views/user/show.html.erb</p>
+<div class="container">
+	<div class="row">    
+		<div class="col-sm-3">
+				<img src="https://www.browserstack.com/images/dummy_avatar.png" class="img-responsive img-circle" width="200px"/>
+				<div class= "container-fluid" id="user_info">
+					<h3>Hi, <%= current_user.first_name %></h3>
+					<h4>Member since:<br> <%= localize(current_user.created_at, :format => '%m/%d/%Y') %></h4>
+				</div> 
+
+		</div>
+			<div class="col-sm-8">
+				<% @response['results'].each do |i| %>
+					<div class="well" id="news-feed">
+						<h3><%= i['title'] %></h3>
+						<p><%= i['abstract'] %></p>
+						<p><%= i['url'] %></p>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
