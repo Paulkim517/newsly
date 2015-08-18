@@ -1,9 +1,20 @@
-<div class="well" id="news-feed">
 <h1>Latest News:</h1>
+
+<div class="row">
+  <div class="col-xs-12 col-md-7">
+  	<div class="mapbox" id="map"></div>
+  	</div>
+
+
+  	<div class="col-xs-6 col-md-5">
+  		<h2>NEWS FEED:</h2>
+
+  		<% @response['results'].each do |i| %>
+				<div class="well" id="news-feed">
+					<p><%= i['title'] %></p>
+					<p><%= i['abstract'] %></p>
+					<p><%= i['url'] %></p>
+				</div>
+			<% end %> 
+  </div>
 </div>
-<% @response.each do |i| %>
-
-<%= @title %>
-<%= @body %>
-
-<% end %>
