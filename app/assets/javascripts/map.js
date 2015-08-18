@@ -22,7 +22,7 @@ $(function(){
       },
       properties: {
         description:  "hello world",
-        'marker-size': 'small',
+        'marker-size': 'large',
         'marker-color': '#fc4607',
         'marker-symbol': 'star'
       }

@@ -1,7 +1,10 @@
 /* mapbox */
 .mapbox {
-  height: 300px;
+  height: 350px;
   width: 100%;
+}
+.navbar{
+	margin-bottom: 0px;
 }
 
 
