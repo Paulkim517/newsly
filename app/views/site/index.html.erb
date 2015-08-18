@@ -1,20 +1,20 @@
-<h1>Latest News:</h1>
 
 <div class="row">
-  <div class="col-xs-12 col-md-7">
-  	<div class="mapbox" id="map"></div>
+  <div class="junbotron">
+  	<div class="mapbox" id="map">
   	</div>
-
-
-  	<div class="col-xs-6 col-md-5">
+  </div>
+  <h4><%= @response['results'][0]['geo_facet'] %><h4>
+  <div class="container fluid">
+  	<div class="col-md-12" id="news">
   		<h2>NEWS FEED:</h2>
-
   		<% @response['results'].each do |i| %>
 				<div class="well" id="news-feed">
-					<p><%= i['title'] %></p>
+					<h3><%= i['title'] %></h3>
 					<p><%= i['abstract'] %></p>
-					<p><%= i['url'] %></p>
+					<p><%= i['url'] %></p>		
 				</div>
 			<% end %> 
-  </div>
+  	</div>
+	</div>
 </div>

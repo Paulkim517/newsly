@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   #form to create user
   def new
     if current_user
-      redirect_to profile_path
+      redirect_to user_path
     else
   	  @user = User.new
   	  render :new
@@ -19,16 +19,18 @@ class UsersController < ApplicationController
   	  if user.save
   		  session[:user_id] = user.id
   		  #redirect_to '/profile'
-  		  redirect_to profile_path
+  		  redirect_to user_path
   	  else
+        flash[:error] = user.errors.full_messages
   		  #redirect_to "/signup"
   		  redirect_to signup_path
   	  end
     end
   end
-  
+ 
   #show current_user
   def show
+    @response = HTTParty.get('http://api.nytimes.com/svc/topstories/v1/national.json?api-key=b7d44ad17cc1da6bd24cdfc172b20a81:5:72707211')
   	render :show
   end
 
@@ -36,5 +38,4 @@ class UsersController < ApplicationController
   	def user_params
   		params.require(:user).permit(:first_name, :last_name, :email, :password)
   	end
-
 end

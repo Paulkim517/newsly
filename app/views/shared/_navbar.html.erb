@@ -4,7 +4,7 @@
         <header>
           <%= link_to root_path  do %>
             
-          <img src=<%= asset_path"logo.png" %> class="margin-lt" width="60px">
+          <img src=<%= asset_path"newsly.png" %> class="margin-lt" width="60px">
           <% end %>
         </header>
 
@@ -18,15 +18,13 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav pull-left">
             <li> <%= link_to "Home", root_path %></li>
-            <% if current_user %>
-              <li> <%= link_to "Profile", profile_path %></li>
-            <% else %>
-             <li> <%= link_to "Home", root_path %></li>
+             <% if current_user %> 
+             <li> <%= link_to "Profile", user_path(current_user), class: "profile" %></li>
             <% end %>
           </ul>
           <ul class="nav navbar-nav pull-right">
             <% if current_user %> 
-              <h3> Welcome <%= current_user.first_name %>&nbsp;&nbsp;<%= link_to "Log out",  logout_path, method: "destroy", class: "btn btn-success" %></h3> 
+              <h3> Welcome <%= current_user.first_name %>&nbsp;&nbsp;<%= link_to "Log out",  logout_path, method: "destroy", class: "btn btn-primary" %></h3> 
             <% else %> 
               <p><%= link_to "Sign Up", signup_path , class: "btn btn-primary" %>&nbsp;&nbsp;<%= link_to "Log In", login_path , class: "btn btn-primary" %></p>
             <% end %> 
