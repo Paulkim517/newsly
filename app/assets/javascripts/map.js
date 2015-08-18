@@ -21,7 +21,7 @@ $(function(){
         coordinates: [lng, lat]
       },
       properties: {
-        description: '@' + results.title,
+        description: '' + results.title,
         'marker-size': 'small',
         'marker-color': '#fc4607',
         'marker-symbol': 'star'
