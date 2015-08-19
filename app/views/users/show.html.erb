@@ -8,13 +8,14 @@
 			</div> 
 		</div>
 		<div class="col-sm-8" id="user-articles">
-			<% @response['results'].each do |i| %>
+			<% @both.each do |i| %>
 			<div class="well" id="news-feed">
 				<h3><%= i['title'] %></h3>
 				<p><%= i['abstract'] %></p>
 				<p><%= link_to "View full article", i['url'] %></p>
 			</div>
 			<% end %>
+
 		</div>
 	</div>
 </div>

@@ -7,7 +7,7 @@
   <div class="container fluid">
     <div class="col-md-12" id="news">
      <h2>NEWS FEED:</h2>
-  	 <% @response['results'].each do |i| %>
+  	 <% @both.each do |i| %>
 	     <div class="well" id="news-feed">
 		     <h3><%= i['title'] %></h3>
 		     <p><%= i['abstract'] %></p>

@@ -26,7 +26,7 @@ $(function(){
         description: title,
         'marker-size': 'small',
         'marker-color': '#fc4607',
-        'marker-symbol': 'star'
+        'marker-symbol': 'circle-stroked'
       }
     }).addTo(map);
   };
@@ -45,6 +45,22 @@ $(function(){
       }
     });
   });
+
+  $.get("/results.json",function(data){
+    data.forEach(function(article){
+      var location = article.geo_facet[0]
+      var title = article.title
+
+      if(location !== undefined && title !== undefined){
+        geocoder.query(article.geo_facet[0], function(err, geo) {          
+          if (!err) {
+            showMarker(geo.latlng[1], geo.latlng[0], title);
+          }
+        });
+      }
+    });
+  });
+
 });  
 
 
