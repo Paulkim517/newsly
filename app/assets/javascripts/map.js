@@ -26,7 +26,7 @@ $(function(){
         description: title,
         'marker-size': 'small',
         'marker-color': '#fc4607',
-        'marker-symbol': 'star'
+        'marker-symbol': 'circle'
       }
     }).addTo(map);
   };
