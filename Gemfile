@@ -6,7 +6,7 @@ ruby '2.0.0'
 gem 'dotenv-rails', :groups => [:development, :test]
 
 #s3 bucket
-gem 'aws-sdk', '~> 1.6'
+gem 'aws-sdk', '~> 2'
 #user can upload personal photos
 gem "paperclip", "~> 4.3"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -35,6 +35,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
  
 gem 'pg'
+
+gem 'friendly_id'
 
 gem 'twitter'
 # Call 'byebug' anywhere in the code to stop execution and get a debugger console
