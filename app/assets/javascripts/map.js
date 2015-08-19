@@ -13,7 +13,7 @@ $(function(){
  var geocoder = L.mapbox.geocoder('mapbox.places-v1');
  
  // function to show markers on map
-  var showMarker = function(lng, lat) {
+  var showMarker = function(lng, lat, title) {
     L.mapbox.featureLayer({
       type: 'Feature',
       geometry: {
@@ -21,7 +21,7 @@ $(function(){
         coordinates: [lng, lat]
       },
       properties: {
-        description:  "hello world",
+        description:  title,
         'marker-size': 'large',
         'marker-color': '#fc4607',
         'marker-symbol': 'star'
@@ -32,20 +32,25 @@ $(function(){
 
 
   $.get("/results.json",function(data){
-    console.log(data)
-    for (var i = 0; i < data.results.length; i++) {
-      console.log(data.results[i].geo_facet[0])
-      var location = data.results[i].geo_facet[0]
-      if(location !== undefined){
-        geocoder.query(data.results[i].geo_facet[0], function(err, geo) {
+    data.results.forEach(function(article){
+      var location = article.geo_facet[0]
+      var title = article.title
+      console.log(title);
+      
+      if(location !== undefined && title !== undefined){
+
+        geocoder.query(article.geo_facet[0], function(err, geo) {
+        console.log(data);
+          
           if (!err) {
-            showMarker(geo.latlng[1], geo.latlng[0]);
+            showMarker(geo.latlng[1], geo.latlng[0], title);
           }
         });
       }
-            
-      
-    };
+
+
+    });
+
 
   });
 
