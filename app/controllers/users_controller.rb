@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_filter :authorize, only: [:show]
+
   #form to create user
   def new
     if current_user
@@ -19,7 +20,7 @@ class UsersController < ApplicationController
   	  if user.save
   		  session[:user_id] = user.id
   		  #redirect_to '/profile'
-  		  redirect_to user_path
+  		  redirect_to profile_path
   	  else
         flash[:error] = user.errors.full_messages
   		  #redirect_to "/signup"
@@ -34,8 +35,9 @@ class UsersController < ApplicationController
   	render :show
   end
 
+
   private
   	def user_params
-  		params.require(:user).permit(:first_name, :last_name, :email, :password)
+  		params.require(:user).permit(:first_name, :last_name, :email, :password, :avatar)
   	end
 end

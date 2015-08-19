@@ -9,8 +9,6 @@ $(function(){
             maxBounds: [[-90, -180], [90, 180]]
   });
   
-
-
   //set variables
   var geocoder = L.mapbox.geocoder('mapbox.places-v1');
  
@@ -32,21 +30,6 @@ $(function(){
   };
 
   $.get("/results.json",function(data){
-    data.results.forEach(function(article){
-      var location = article.geo_facet[0]
-      var title = article.title
-
-      if(location !== undefined && title !== undefined){
-        geocoder.query(article.geo_facet[0], function(err, geo) {          
-          if (!err) {
-            showMarker(geo.latlng[1], geo.latlng[0], title);
-          }
-        });
-      }
-    });
-  });
-
-  $.get("/results.json",function(data){
     data.forEach(function(article){
       var location = article.geo_facet[0]
       var title = article.title
@@ -60,7 +43,4 @@ $(function(){
       }
     });
   });
-
 });  
-
-

@@ -1,7 +1,14 @@
 source 'https://rubygems.org'
 
+
 ruby '2.0.0'
 
+gem 'dotenv-rails', :groups => [:development, :test]
+
+#s3 bucket
+gem 'aws-sdk', '~> 1.6'
+#user can upload personal photos
+gem "paperclip", "~> 4.3"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use sqlite3 as the database for Active Record
@@ -36,6 +43,8 @@ gem 'byebug'
 gem 'web-console', '~> 2.0'
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring'
+
+gem 'factory_girl'
 
 group :production do
  	gem 'rails_12factor'
