@@ -6,8 +6,11 @@ $(function(){
             center: [34, -97],
             zoom: 2,
             minZoom: 2,
+            zoomControl: false,
             maxBounds: [[-90, -180], [90, 180]]
   });
+  
+
 
   //set variables
  var geocoder = L.mapbox.geocoder('mapbox.places-v1');

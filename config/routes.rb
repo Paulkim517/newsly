@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
  
 
-  get 'news/show'
+  
 
  root "site#index"
 # users routes homie
@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
  #results
  get "/results", to: "site#index"
+ get '/about', to: "site#about"
 
 
 end
