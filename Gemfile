@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
-
-
+#s3 bucket
+gem 'aws-sdk', '~> 1.6'
+#user can upload personal photos
+gem "paperclip", "~> 4.3"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 
