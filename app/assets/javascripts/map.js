@@ -13,15 +13,22 @@ $(function(){
   var geocoder = L.mapbox.geocoder('mapbox.places-v1');
  
   // function to show markers on map
-  var showMarker = function(lng, lat) {
+  
+
+
+  var showMarker = function(i, lng, lat) {
+
+
     L.mapbox.featureLayer({
       type: 'Feature',
       geometry: {
         type: 'Point',
         coordinates: [lng, lat]
       },
+
       properties: {
-        description: + results.title,
+
+        description:  data.results[i].title,
         'marker-size': 'small',
         'marker-color': '#fc4607',
         'marker-symbol': 'star'
@@ -29,11 +36,25 @@ $(function(){
     }).addTo(map);
   };
 
-  geocoder.query(results.geo_facet, function(err, result) {
-    if (!err) {
-      showMarker(result.latlng[1], result.latlng[0], result.title, results.abstract);
-    }
+    console.log(data)
+      console.log(data.results[i].geo_facet[0])
+      
+      $.get("/results.json",function(data){
+
+      for (var i = 0; i < data.results.length; i++) {
+
+
+
+      var location = data.results[i].geo_facet[0]
+      if(location !== undefined){
+        geocoder.query(data.results[i].geo_facet[0], function(err, geo) {
+          if (!err) {
+            showMarker(i, geo.latlng[1], geo.latlng[0]);
+          }
+        });
+      }            
+    };
   });
-});
+});  
 
 
