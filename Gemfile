@@ -29,6 +29,8 @@ gem 'bcrypt', '~> 3.1.7'
  
 gem 'pg'
 
+gem 'friendly_id'
+
 gem 'twitter'
 # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 gem 'byebug'

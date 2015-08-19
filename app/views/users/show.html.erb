@@ -3,7 +3,7 @@
 		<div class="col-sm-3">
 			<img src="https://www.browserstack.com/images/dummy_avatar.png" class="img-responsive img-circle" width="200px"/>
 			<div class= "container-fluid" id="user_info">
-				<h3>Hi, <%= current_user.first_name %></h3>
+				<h3><%= current_user.first_name %></h3>
 				<h4>Member since:<br> <%= localize(current_user.created_at, :format => '%m/%d/%Y') %></h4>
 			</div> 
 		</div>
