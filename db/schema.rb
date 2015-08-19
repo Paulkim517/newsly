@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20150819015821) do
   create_table "news", force: :cascade do |t|
     t.string   "title"
     t.string   "body"
-    t.string   "link_url"
+    t.string   "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
