@@ -2,6 +2,10 @@ class User < ActiveRecord::Base
 	has_many :news, dependent: :destroy
 	has_secure_password
 
+  extend FriendlyId
+  friendly_id :first_name, use: :slugged
+
+
 # attr_accessible :avatar
   has_attached_file :avatar,
                     :styles => { :medium => "150x150>", :thumb => "44x44#" },
