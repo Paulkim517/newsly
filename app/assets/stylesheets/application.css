@@ -1,8 +1,26 @@
 /* mapbox */
+
 .mapbox {
-  height: 300px;
+  height: 350px;
   width: 100%;
 }
+.navbar{
+	margin-bottom: 0px;
+}
+#about{
+	background-image: url('https://images.unsplash.com/40/lUUnN7VGSoWZ3noefeH7_Baker%20Beach-12.jpg?q=80&fm=jpg&s=61e4d383791544ad3258e90d982d8e0e');
+	background-size: cover;
+	background-position: center;
+	min-height: 400px;
+}
+#contrib{
+	text-align: right;
+	float:right;
+}
+#user-articles{
+	margin-top:75px;
+}
+
 
 
 /*

@@ -198,6 +198,7 @@ DEPENDENCIES
   httparty
   jbuilder (~> 2.0)
   jquery-rails
+  json (~> 1.8.3)
   paperclip (~> 4.3)
   pg
   rails (= 4.2.3)
