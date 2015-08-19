@@ -7,12 +7,12 @@
 				<h4>Member since:<br> <%= localize(current_user.created_at, :format => '%m/%d/%Y') %></h4>
 			</div> 
 		</div>
-		<div class="col-sm-8">
+		<div class="col-sm-8" id="user-articles">
 			<% @response['results'].each do |i| %>
 			<div class="well" id="news-feed">
 				<h3><%= i['title'] %></h3>
 				<p><%= i['abstract'] %></p>
-				<p><%= i['url'] %></p>
+				<p><%= link_to "View full article", i['url'] %></p>
 			</div>
 			<% end %>
 		</div>
