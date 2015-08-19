@@ -1,7 +1,7 @@
 /* mapbox */
 
 .mapbox {
-  height: 350px;
+  height: 675px;
   width: 100%;
 }
 .navbar{
@@ -19,6 +19,25 @@
 }
 #user-articles{
 	margin-top:75px;
+}
+#brand{
+	color:#FB4505;
+	font-size: 25px;
+	font-weight: bold;
+}
+#nav{
+	background-color: #262626;
+	color:#FB4505;
+}
+body{
+	background-image: url('subtle.png');
+	color:#262626;
+}
+.well{
+	opacity: 0.9;
+}
+.btn-primary{
+	margin-top: 10px;
 }
 
 
