@@ -12,11 +12,20 @@ $(function(){
 
   var map = L.mapbox.map('map', 'sahash182.n7e72gef', {
             center: [34, -97],
-            zoom: 2,
+            zoom: 3,
             minZoom: 2,
             zoomControl: false,
             maxBounds: [[-90, -180], [90, 180]]
   });
+
+
+      // map.dragging.disable();
+      map.touchZoom.disable();
+      map.doubleClickZoom.disable();
+      map.scrollWheelZoom.disable();
+      // Disable tap handler, if present.
+      if (map.tap) map.tap.disable();
+
 
   
   //set variables
