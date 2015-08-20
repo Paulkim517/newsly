@@ -21,7 +21,9 @@
 <!-- shared nav-bar -->
 <%= render "shared/navbar" %>
 
-
+<% flash.each do |name, msg| %>
+   <%= content_tag :div, msg, class: "alert #{name == 'error' ? 'alert-danger' : 'alert-notice'}" %>
+ <% end %>
 <%= yield %>
 
 
