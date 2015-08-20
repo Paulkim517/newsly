@@ -3,10 +3,11 @@
 source 'https://rubygems.org'
 
 #s3 bucket
-# current time
-gem 'formatted_times'
 gem 'dotenv-rails', :groups => [:development, :test]
 gem 'aws-sdk', '< 2.0'
+
+# current time
+gem 'formatted_times'
 #ruby version
 ruby '2.0.0'
 #user can upload personal photos
@@ -15,7 +16,9 @@ gem 'paperclip'
 gem 'rails', '4.2.3'
 # Use sqlite3 as the database for Active Record
 group :development, :test do 
+  gem 'rspec-rails'
   gem 'sqlite3'
+  gem 'ffaker'
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -61,7 +64,6 @@ gem 'spring'
 
 #post gres 
 gem 'pg'
-
 #vanity link
 gem 'friendly_id'
 #twitter api
