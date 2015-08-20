@@ -4,7 +4,7 @@ Description: Newsly helps you become more globally minded. Our web app visualize
 
 Link to site: newsli.herokuapp.com
 
-Wireframes: ![alt tag](http://url/to/img.png)
+Wireframes: ![Imgur](http://i.imgur.com/jUxGLO2.jpg?1)
 
 Model Relationship: ![Imgur](http://i.imgur.com/jh2g0JT.jpg?1)
 
