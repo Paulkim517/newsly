@@ -6,7 +6,7 @@
 
 
 <div class="col-sm-4 col-sm-offset-4">
-  <h4>Sign Up</h4>
+  <h4>Sign Up</h4><hr>
    <%= form_for @user, :url => users_path, :html => { :multipart => true } do |f| %>
      <!-- first name field -->
      <%= f.label :first_name %>:
@@ -21,7 +21,7 @@
      <%= f.label :password %>:
      <%= f.password_field :password, class:"form-control" %><br />
      <!-- avatar field -->
-     <%= f.label :avatar, "avatar" %>:
+     <%= f.label :avatar, "Your Image" %>:
      <%= f.file_field :avatar %><br />
 
      <!-- signup button -->
