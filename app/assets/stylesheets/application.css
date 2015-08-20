@@ -43,6 +43,12 @@
 	text-align: right;
 	float:right;
 }
+#news-feed > div.panel-heading{
+	color:#111111;
+}
+#news-feed > div.panel-body{
+	color:#111111;
+}
 #user-articles{
 	margin-top:75px;
 }
@@ -60,9 +66,18 @@
 	color:#FB4505;
 	z-index: 2;
 	border: none;
+	position: fixed !important;
+
 }
 #mapjumbo{
 	height: 400px;
+}
+#share-buttons img {
+width: 75px;
+padding: 5px;
+border: 0;
+box-shadow: 0;
+display: inline;
 }
 body{
 	/*background-image: url('subtle.png');*/
@@ -86,6 +101,9 @@ body{
 	float:right;
 	margin-top: 1000px;
 }
+#news2{
+	float:right;
+}
 #p{
 	font-size: 16px;
 }
@@ -101,6 +119,8 @@ body{
 	/*background: #FDA282;*/
 	/*color:white;*/
 	/*margin-top: 60px;*/
+	background: #E6E6E6;
+	color:black;
 	vertical-align:right;
 	cursor: pointer;
 	transition-property: background;
@@ -109,8 +129,8 @@ body{
 
 	}
 	#news-feed:hover {
-	  background: #E6E6E6;
-	  color:black;
+	  /*background: #E6E6E6;*/
+	  /*color:black;*/
 	  opacity: 1;
 	}
 }
@@ -125,6 +145,7 @@ legend{
 #user_info{
 	color:white;
 	position: fixed;
+	z-index: 2;
 }
 
 .navbar-thumb{
@@ -175,8 +196,9 @@ legend{
 	background-color: #262626;
 }
 .med{
-	border-radius: 15%;
+	border-radius: 6px;
 	position: fixed;
+	width:150px;
 }
 #high{
 	color: white;
@@ -186,19 +208,12 @@ legend{
 #high:hover{
 	color: #FB4505;
 }
+#aboutBody { 
+	margin: 0; padding: 0;
+}
+#container {
+	width:100%;
+}
+section { padding: 5% 15%; margin: 0 auto;}
 
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+

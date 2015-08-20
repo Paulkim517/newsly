@@ -22,7 +22,7 @@
           
             <% if current_user %> 
 
-              <li><a class="navbar-header" href="/profile"><%= image_tag current_user.avatar.url(:thumb), class: "navbar-thumb" %>&nbsp;&nbsp;<%= current_user.first_name %></a>&nbsp;&nbsp;<%= link_to "Log out",  logout_path, method: "destroy", class: "btn btn-danger" %></li> 
+              <li><%= link_to "Log out",  logout_path, method: "destroy" %></li> 
 
         
             <% else %> 
