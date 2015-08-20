@@ -1,7 +1,15 @@
 $(function(){
+
+  $(window).scroll(function(){
+     if($(window).scrollTop()<20){
+           $('.fader').stop(true,true).fadeIn("slow");
+     } else {
+           $('.fader').stop(true,true).fadeOut("slow");
+     }
+  });
    // render map
   L.mapbox.accessToken = 'pk.eyJ1Ijoic2FoYXNoMTgyIiwiYSI6IjJhNGNjYzNiMTRmMGQ5MjkwYjcwMmEwY2IwYjkxMDk5In0.9d5E9GnR78TIUvQnjUrGxw';
-  var map = L.mapbox.map('map', 'sahash182.n6o0oh90', {
+  var map = L.mapbox.map('map', 'sahash182.n7e72gef', {
             center: [34, -97],
             zoom: 3,
             minZoom: 2,
