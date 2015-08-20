@@ -20,6 +20,16 @@ class UsersController < ApplicationController
     
   	  if @user.save
   		  session[:user_id] = @user.id
+        #POST /user
+        #POST /users.json
+        def create
+          @user = User.new(params[:user])
+
+          respond_to do |format|
+            if @user.save
+              # tell the UserMailer to send a welcome Email after save
+              UserMailer.welcome_email(@user).deliver
+
   		  #redirect_to '/profile'
   		  redirect_to profile_path
   	  else
