@@ -1,13 +1,13 @@
 class ApplicationController < ActionController::Base
 # POST /users
 # POST /users.json
-def create
-	@user = User.new(params[:user])
+# def create
+# 	@user = User.new(params[:user])
 
-	respond_to do |format|
-		if @user.save
-			# Tell the UserMAiler to send a welcome email after save
-			UserMailer.welcome_email(@user).deliver
+# 	respond_to do |format|
+# 		if @user.save
+# 			# Tell the UserMAiler to send a welcome email after save
+# 			UserMailer.welcome_email(@user).deliver
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -45,6 +45,4 @@ def create
   end
   
 end
-
-
 
