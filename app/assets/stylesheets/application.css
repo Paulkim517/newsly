@@ -1,11 +1,23 @@
 /* mapbox */
 
 .mapbox {
-  height: 675px;
+  height: 500px;
   width: 100%;
+
 }
-.navbar{
-	margin-bottom: 0px;
+#navbar{
+
+}
+.jumbotron{
+	height:500px;
+	width: 100%;
+	background-color: #262626;
+	margin-top: -65px;
+}
+#map{
+	position: fixed;
+	z-index: 2;
+	/*width:1500px;*/
 }
 #about{
 	background-image: url('https://images.unsplash.com/40/lUUnN7VGSoWZ3noefeH7_Baker%20Beach-12.jpg?q=80&fm=jpg&s=61e4d383791544ad3258e90d982d8e0e');
@@ -28,17 +40,40 @@
 #nav{
 	background-color: #262626;
 	color:#FB4505;
+	z-index: 2;
 }
 body{
-	background-image: url('subtle.png');
+	/*background-image: url('subtle.png');*/
 	color:#262626;
+	background-color:#1E1E1E;
+  padding-top: 70px; 
+	/*overflow: hidden;*/
 }
 .well{
-	opacity: 0.9;
+	opacity: 0.4;
 }
 .btn-primary{
 	margin-top: 10px;
 }
+#news-feed{
+	z-index: 1;
+	/*background: #FDA282;*/
+	/*color:white;*/
+	cursor: pointer;
+	transition-property: background;
+	transition-duration: 3s;
+	transition-timing-function: linear;
+	}
+	#news-feed:hover {
+	  background: white;
+	  color:black;
+	  opacity: 0.9;
+	}
+}
+/*.marker-symbol:hover{
+	color:black;
+}*/
+
 
 
 
