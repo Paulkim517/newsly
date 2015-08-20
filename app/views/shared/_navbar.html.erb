@@ -13,21 +13,21 @@
         </button>
       </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav pull-left">
+          <ul class="nav navbar-nav pull-left" id="auth">
              <li> <%= link_to "Home", root_path %></li>
              <li> <%= link_to "About", about_path %></li>
              <% if current_user %> 
              <li> <%= link_to "Profile", user_path(current_user), class: "profile" %></li>
             <% end %>
-          </ul>
-          <ul class="nav navbar-nav pull-right">
+          
             <% if current_user %> 
 
-              <p><a class="navbar-header" href="/profile"><%= image_tag current_user.avatar.url(:thumb), class: "navbar-thumb" %>&nbsp;&nbsp;<%= current_user.first_name %></a>&nbsp;&nbsp;<%= link_to "Log out",  logout_path, method: "destroy", class: "btn btn-primary" %></p> 
+              <li><a class="navbar-header" href="/profile"><%= image_tag current_user.avatar.url(:thumb), class: "navbar-thumb" %>&nbsp;&nbsp;<%= current_user.first_name %></a>&nbsp;&nbsp;<%= link_to "Log out",  logout_path, method: "destroy", class: "btn btn-danger" %></li> 
 
         
             <% else %> 
-              <p><%= link_to "Sign Up", signup_path , class: "btn btn-primary" %>&nbsp;&nbsp;<%= link_to "Log In", login_path , class: "btn btn-primary" %></p>
+              <li><%= link_to "Sign Up", signup_path , class: "btn" %></li>
+              <li><%= link_to "Log In", login_path , class: "btn" %></li>
             <% end %> 
 
           </ul>

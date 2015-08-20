@@ -3,6 +3,8 @@
 source 'https://rubygems.org'
 
 #s3 bucket
+# current time
+gem 'formatted_times'
 gem 'dotenv-rails', :groups => [:development, :test]
 gem 'aws-sdk', '< 2.0'
 #ruby version
