@@ -18,12 +18,16 @@ $(function(){
             zoomControl: false,
             maxBounds: [[-90, -180], [90, 180]]
   });
-   // map.dragging.disable();
-        map.touchZoom.disable();
-        map.doubleClickZoom.disable();
-        map.scrollWheelZoom.disable();
-  // Disable tap handler, if present.
-  if (map.tap) map.tap.disable();
+
+
+      // map.dragging.disable();
+      map.touchZoom.disable();
+      map.doubleClickZoom.disable();
+      map.scrollWheelZoom.disable();
+      // Disable tap handler, if present.
+      if (map.tap) map.tap.disable();
+
+
  
   //set variables
   var geocoder = L.mapbox.geocoder('mapbox.places-v1');
