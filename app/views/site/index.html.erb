@@ -11,16 +11,15 @@
   <!-- <div class="container"> -->
     <!-- <div class=".col-md-8">
     </div> -->
-  <h2 id="breaking"><%= @date.strftime("%B %d, %Y") %></h2>
   <div class="sharefb">
     <ul>
-      <li><a href="https://www.facebook.com/sharer/sharer.php?u=newsli.herokuapp.com" target="_blank" class="fb-share-button"  data-layout="button"><img src="http://standuptriad.org/fblogo.png" alt="Share newsly" width="42" height="42" border="0"></a></li><br>
+      <li><a href="https://www.facebook.com/sharer/sharer.php?u=newsli.herokuapp.com" target="_blank" class="fb-share-button"  data-layout="button"><img src=<%= asset_path "facebook.png"%> alt="Share newsly" width="42" height="42" border="0"></a></li><br>
     <ul>  
   </div>
   <div class="sharetw">
     <ul>
       <!-- twitter button + redirect to twitter page -->
-      <li><a href="https://twitter.com/share/" class="twitter-share-button" data-url="http://newsli.herokuapp.com" data-via="sahash4" data-layout="button"><img src="http://www.salfootball.com/wp-content/uploads/2014/03/twitter-icon-black.png" alt="Share newsly" width="42" height="42" border="0"></a></li>
+      <li><a href="https://twitter.com/share/" class="twitter-share-button" data-url="http://newsli.herokuapp.com" data-via="sahash4" data-layout="button"><img src=<%= asset_path"twitter.png"%> alt="Share newsly" width="42" height="42" border="0"></a></li>
     </ul>
   </div>
 
@@ -37,7 +36,6 @@
       </div>
       <% end %>
     </div>
-
 
 
 

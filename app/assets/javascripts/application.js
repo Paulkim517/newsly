@@ -16,14 +16,6 @@
 //= require_tree .
 
 $(function(){
-	
-$(window).scroll(function(){
-   if($(window).scrollTop()<20){
-         $('.fader').stop(true,true).fadeIn("slow");
-   } else {
-         $('.fader').stop(true,true).fadeOut("slow");
-   }
-});
 
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -37,7 +29,6 @@ $(window).scroll(function(){
 
 
 });
-
 
 
 

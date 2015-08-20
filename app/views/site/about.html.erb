@@ -1,31 +1,196 @@
+  <!-- <! doctype html> -->
+  <html>
+    <head>
+      <style>
+      @import url(http://fonts.googleapis.com/css?family=Nunito);
 
+      html {
+        height: 100%;
+        overflow: hidden;
+      }
+      /*a{
+        font-size: 20px;
+      }*/
+      #two{
+        text-align: right;
+      }
+      #nav{
+        position: fixed;
+      }
+      body { 
+        margin:0;
+        padding:0;
+        perspective: 1px;
+        transform-style: preserve-3d;
+        height: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        font-family: Nunito;
+        z-index: -1;
+      }
 
+      /*h1 {
+         font-size: 250%
+      }*/
 
-<div class="jumbotron" id="about">
-</div>
+      p {
+        font-size: 140%;
+        line-height: 150%;
+        color: #333;
+      }
 
-<div class="container">
+      .slide {
+        position: relative;
+        padding: 25vh 10%;
+        min-height: 100vh;
+        width: 100vw;
+        box-sizing: border-box;
+        box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+        transform-style: inherit;
+      }
 
+      img {
+        position: absolute;
+        top: 50%;
+        left: 35%;
+        width: 320px;
+        height: 240px;
+        transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(2deg);
+        padding: 10px;
+        border-radius: 5px;
+        background: rgba(240,230,220, .7);
+        box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+      }
 
-<div class="row">
+      img:last-of-type {
+        transform: translateZ(.4px) scale(.6) translateX(-104%) translateY(-40%) rotate(-5deg);
+      }
 
-  	<div class="well col-xs-12 col-sm-6 col-md-8">
+      .slide:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left:0;
+        right:0;
+      }
 
-  	<h4>About:</h4>
-  	<p>Tilde Etsy pop-up, Schlitz plaid art party organic bicycle rights biodiesel fanny pack. YOLO Neutra Shoreditch Truffaut, occupy blog flannel 3 wolf moon mlkshk. Synth Pitchfork mixtape dreamcatcher mlkshk tofu. Vegan chambray gluten-free, 3 wolf moon readymade dreamcatcher paleo mixtape listicle. Sriracha bespoke Etsy PBR&B, kitsch letterpress sustainable cray freegan readymade keffiyeh fingerstache. Gentrify tousled whatever, VHS quinoa roof party sartorial church-key freegan vegan XOXO photo booth semiotics jean shorts. Four loko kitsch swag, bitters migas bicycle rights Vice Truffaut Etsy fashion axe<br><br> forage chia.Pickled authentic Odd Future tattooed swag, Brooklyn synth pop-up hoodie fingerstache leggings raw denim. Yr brunch bespoke listicle, tattooed blog freegan chillwave High Life roof party Godard Truffaut. Neutra gentrify tofu, PBR gluten-free lumbersexual mlkshk Truffaut. Retro you probably haven't heard of them Odd Future mixtape, mumblecore kitsch artisan ennui tousled organic actually deep v. Tote bag hella keytar four loko, taxidermy before they sold out High Life mlkshk. Tousled distillery Truffaut, cray sriracha sartorial letterpress art party master cleanse readymade Schlitz Etsy lo-fi direct trade fixie. Portland chambray trust fund pop-up, fingerstache sartorial asymmetrical.</p>
-  	</div>
+      .title {
+        width: 50%;
+        padding: 5%;
+        border-radius: 5px;
+        background: rgba(240,230,220, .7);
+        box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+      }
 
+      .slide:nth-child(2n) .title {
+        margin-left: 0;
+        margin-right: auto;
+      }
 
-     <div class="well col-xs-6 col-md-3" id="contrib">
-  		<h4>Contributors:<h4>
-  		<strong>Josh Baker</strong><br>
-  		<strong>Paul Kim</strong><br>
-  		<strong>Julfi Chumber</strong><br>
-  		<strong>Sahash Sainju</strong>
+      .slide:nth-child(2n+1) .title {
+        margin-left: auto;
+        margin-right: 0;
+      }
 
-  	 </div>
-   </div>
-</div>
+      .slide, .slide:before {
+        background: 50% 50% / cover;  
+      }
+
+      .header {
+        text-align: center;
+        font-size: 175%;
+        color: #fff;
+        text-shadow: 0 2px 2px #000;
+      }
+
+      #title {
+        background-image: url("http://lorempixel.com/output/abstract-q-c-640-480-6.jpg");
+         background-attachment: fixed;  
+      }
+
+      #slide1:before {
+        background-image: url("http://lorempixel.com/output/abstract-q-c-640-480-4.jpg");
+        transform: translateZ(-1px) scale(2);
+        z-index:-1;
+      }
+
+      #slide2 {
+
+        background-image: url("http://lorempixel.com/output/abstract-q-c-640-480-3.jpg");
+        background-attachment: fixed;
+      }
+      #slide5{
+        background-image: url('http://lorempixel.com/output/abstract-q-c-640-480-4.jpg');
+        background-attachment: fixed;
+      }
+
+      #slide3:before {
+        background-image: url("http://lorempixel.com/output/abstract-q-c-640-480-5.jpg");
+        transform: translateZ(-1px) scale(2);
+        z-index:-1;
+      }
+
+      #slide4 {
+        background: #222;
+      }
+      </style>
+      <script>
+        $(function{
+          var touch = Modernizr.touch;
+          $('.img-holder').imageScroll({
+            imageAttribute: (touch === true) ? 'image-mobile' : 'image',
+            touch: touch
+          });
+        });
+      </script>
+      <body>
+      </head>
+<!--       <div id="title" class="slide header">
+        <h1>Newsly</h1>
+      </div> -->
+
+      <div id="slide2" class="slide">
+        <div class="title">
+          <h1>Our Mission</h1>
+          <p>Lorem ipsum dolor sit amet, in velit iudico mandamus sit, persius dolorum in per, postulant mnesarchum cu nam. Malis movet ornatus id vim, feugait detracto est ea, eam eruditi conceptam in. Ne sit explicari interesset. Labores perpetua cum at. Id viris docendi denique vim.</p>
+        </div>
+      </div>
+
+      <div id="slide3" class="slide">
+        <div class="title" id="two">
+          <h1>Josh Baker</h1><a href="https://www.linkedin.com/in/joshlbaker">LinkedIn </a><a href="https://github.com/joshlbaker">| GitHub</a>
+          <p>Lorem ipsum dolor sit amet, in velit iudico mandamus sit, persius dolorum in per, postulant mnesarchum cu nam. Malis movet ornatus id vim, feugait detracto est ea, eam eruditi conceptam in. Ne sit explicari interesset. Labores perpetua cum at. Id viris docendi denique vim.</p>
+        </div>
+      </div>
+
+      <div id="slide5" class="slide">
+        <div class="title">
+          <h1>Julfi Chumber</h1><a href="https://www.linkedin.com/in/julfic">LinkedIn </a><a href="https://github.com/jchummy">| GitHub</a>
+          <p>Lorem ipsum dolor sit amet, in velit iudico mandamus sit, persius dolorum in per, postulant mnesarchum cu nam. Malis movet ornatus id vim, feugait detracto est ea, eam eruditi conceptam in. Ne sit explicari interesset. Labores perpetua cum at. Id viris docendi denique vim.</p>
+        </div>
+      </div>
+
+      <div id="slide3" class="slide">
+        <div class="title" id="two">
+          <h1>Paul Kim</h1><a href="https://github.com/Paulkim517/">LinkedIn </a><a href="https://www.linkedin.com/in/paulkim517">| GitHub</a>
+          <p>Lorem ipsum dolor sit amet, in velit iudico mandamus sit, persius dolorum in per, postulant mnesarchum cu nam. Malis movet ornatus id vim, feugait detracto est ea, eam eruditi conceptam in. Ne sit explicari interesset. Labores perpetua cum at. Id viris docendi denique vim.</p>
+        </div>
+      </div>
+
+      <div id="slide5" class="slide">
+        <div class="title">
+          <h1>Sahash Sainju</h1><a href="https://github.com/sahash182">LinkedIn </a><a href="https://www.linkedin.com/in/sahash182">| GitHub</a>
+          <p>Lorem ipsum dolor sit amet, in velit iudico mandamus sit, persius dolorum in per, postulant mnesarchum cu nam. Malis movet ornatus id vim, feugait detracto est ea, eam eruditi conceptam in. Ne sit explicari interesset. Labores perpetua cum at. Id viris docendi denique vim.</p>
+        </div>
+      </div>
+
+      <div id="slide4" class="slide header">
+          <h1>Contact Us</h1>
+          <a href='http://www.newsly.corporate@gmail.com'>newsly.corporate@gmail.com</a>
+      </div>
+    </body>
+  </html>
 
 
 

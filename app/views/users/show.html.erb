@@ -1,17 +1,16 @@
+
 <div class="container">
 	<div class="row">    
 		<div class="col-md-2">
-			
 			<div class= "container" id="user_info">
 				<h3><%= current_user.first_name %></h3>
 				<h4>Member since:<br> <%= localize(current_user.created_at, :format => '%m/%d/%Y') %></h4>
 				<%= image_tag current_user.avatar.url(:medium), class: "med" %>
-			
 			</div> 
 		</div>
-		<div class="col-sm-8" id="user-articles">
-			<h2 id="high">Highlighted Stories</h2>
-      <% @response['results'].each do |i| %>
+	    <div class="col-md-5" id="news2">
+			<h2 id="high">World</h2>
+      <% @world['results'].each do |i| %>
       <div class="panel panel-default" id="news-feed">
         <div class="panel-heading">
           <h3 class="panel-title" id="tit"><%= i['title'] %></h3>
@@ -22,6 +21,20 @@
       </div>
       <% end %>
 
+    </div>
+    	   <div class="col-md-5" id="news3">
+    			<h2 id="high">National</h2>
+          <% @response['results'].each do |i| %>
+          <div class="panel panel-default" id="news-feed">
+            <div class="panel-heading">
+              <h3 class="panel-title" id="tit"><%= i['title'] %></h3>
+            </div>
+            <div class="panel-body">
+              <p id="p"><%= i['abstract'] %> <br><p id="linkp"><%= link_to 'View Article', i['url'] %></p></p>
+            </div>
+          </div>
+
+          <% end %>
+        </div>
 		</div>
 	</div>
-</div>

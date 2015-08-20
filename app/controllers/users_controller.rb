@@ -33,7 +33,8 @@ class UsersController < ApplicationController
   #show current_user
   def show
     @response = HTTParty.get('http://api.nytimes.com/svc/topstories/v1/national.json?api-key=b7d44ad17cc1da6bd24cdfc172b20a81:5:72707211')
-  	render :show
+  	@world = HTTParty.get('http://api.nytimes.com/svc/topstories/v1/world.json?api-key=b7d44ad17cc1da6bd24cdfc172b20a81:5:72707211')
+    render :show
   end
 
 
