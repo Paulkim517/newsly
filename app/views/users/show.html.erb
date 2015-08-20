@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">    
 		<div class="col-sm-3">
-			<img src="https://www.browserstack.com/images/dummy_avatar.png" class="img-responsive img-circle" width="200px"/>
+			
 			<div class= "container-fluid" id="user_info">
 				<h3><%= current_user.first_name %></h3>
 				
@@ -9,7 +9,7 @@
 			</div> 
 		</div>
 		<div class="col-sm-8" id="user-articles">
-			<% @both.each do |i| %>
+			<% @response[results].each do |i| %>
 			<div class="well" id="news-feed">
 				<h3><%= i['title'] %></h3>
 				<p><%= i['abstract'] %></p>
