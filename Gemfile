@@ -1,3 +1,5 @@
+
+
 source 'https://rubygems.org'
 
 #s3 bucket
@@ -33,6 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 #post gres 
 gem 'pg'
+
 #vanity link
 gem 'friendly_id'
 #twitter api
@@ -43,10 +46,7 @@ gem 'byebug'
 gem 'web-console', '~> 2.0'
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring'
-
 gem 'factory_girl'
-
 group :production do
  	gem 'rails_12factor'
 end
-
