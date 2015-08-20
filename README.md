@@ -2,6 +2,7 @@ Newsly
 ==============
 
 Description: Newsly helps you become more globally minded. Our web app visualizes the most recent and breaking news as it happens by plotting points on the locations where the events are taking places. 
+--------------
 
 Link to site: newsli.herokuapp.com
 
