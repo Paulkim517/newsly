@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+ 
  get "news/show"
  root "site#index"
  #users routes homie
  get "/signup", to: "users#new"
- get "/users/:first_name", to: "users#show", as:'profile'
+ get "/profile", to: "users#show"
  resources :users, only: [:create, :edit, :update, :show]
 
  #sessions routes

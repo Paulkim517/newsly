@@ -7,6 +7,7 @@ $(function(){
            $('.fader').stop(true,true).fadeOut("slow");
      }
   });
+
    // render map
   L.mapbox.accessToken = 'pk.eyJ1Ijoic2FoYXNoMTgyIiwiYSI6IjJhNGNjYzNiMTRmMGQ5MjkwYjcwMmEwY2IwYjkxMDk5In0.9d5E9GnR78TIUvQnjUrGxw';
 
@@ -27,10 +28,9 @@ $(function(){
       if (map.tap) map.tap.disable();
 
 
-  
+ 
   //set variables
   var geocoder = L.mapbox.geocoder('mapbox.places-v1');
- 
   // function to show markers on map
   var showMarker = function(lng, lat, title, link) {
     L.mapbox.featureLayer({
