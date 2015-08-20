@@ -1,7 +1,7 @@
 /* mapbox */
 
 .mapbox {
-  height: 675px;
+  height: 400px;
   width: 100%;
 }
 .navbar{
@@ -28,6 +28,9 @@
 #nav{
 	background-color: #262626;
 	color:#FB4505;
+}
+#mapjumbo{
+	height: 400px;
 }
 body{
 	background-image: url('subtle.png');
