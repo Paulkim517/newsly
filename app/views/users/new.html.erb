@@ -1,20 +1,33 @@
-<div class="col-sm-4 col-sm-offset-4">
-  <legend>Sign Up</legend>
+<style>
+    body{
+        color:white;
+    }
+</style>
 
-     <%= form_for @user, :url => users_path, :html => { :multipart => true } do |f| %>
-    <%= f.label :first_name %>:
+
+<div class="col-sm-4 col-sm-offset-4">
+  <h4>Sign Up</h4>
+   <%= form_for @user, :url => users_path, :html => { :multipart => true } do |f| %>
+     <!-- first name field -->
+     <%= f.label :first_name %>:
      <%= f.text_field :first_name, class:"form-control" %><br />
+     <!-- last name field -->
      <%= f.label :last_name %>:
      <%= f.text_field :last_name, class:"form-control" %><br />
+     <!-- email field -->
      <%= f.label :email %>:
      <%= f.email_field :email, class:"form-control" %><br />
+     <!-- password field -->
      <%= f.label :password %>:
      <%= f.password_field :password, class:"form-control" %><br />
-     <!-- paperclip -->
+     <!-- avatar field -->
+     <%= f.label :avatar, "avatar" %>:
+     <%= f.file_field :avatar %><br />
 
-      <%= form.file_field :avatar %>
+     <!-- signup button -->
+    <%= f.submit "Sign Up", class: "btn btn-primary" %>
 
-     <%= f.submit "Sign Up", class:"btn btn-primary" %>
-     <% end %>
+  
+     
   <% end %>
 </div>

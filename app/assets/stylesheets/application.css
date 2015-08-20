@@ -56,6 +56,9 @@
 	z-index: 2;
 	border: none;
 }
+#mapjumbo{
+	height: 400px;
+}
 body{
 	/*background-image: url('subtle.png');*/
 	color:#262626;
@@ -111,9 +114,29 @@ body{
 /*.marker-symbol:hover{
 	color:black;
 }*/
+legend{
+	color:white;
+}
+#user_info{
+	color:white;
+	position: fixed;
+}
 
-
-
+.navbar-thumb{
+	border-radius: 50%;
+}
+.med{
+	border-radius: 15%;
+	position: fixed;
+}
+#high{
+	color: white;
+	text-align: center;
+	margin-bottom: 20px;
+}
+#high:hover{
+	color: #FB4505;
+}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
