@@ -1,7 +1,17 @@
-<div class="well" id="news-feed">
-<h1>Latest News:</h1>
-
-<p>Find me in app/views/site/index.html.erb</p>
-<%= @title %>
-<%= @body %>
+<div class="row">
+  <div class="jumbotron mapbox" id="map"></div>
 </div>
+  <div class="container fluid">
+    <div class="col-md-12" id="news">
+     <h2>NEWS FEED:</h2>
+  	 <% @both.each do |i| %>
+	     <div class="well" id="news-feed">
+		     <h3><%= i['title'] %></h3>
+		     <p><%= i['abstract'] %></p>
+		     <p><%= link_to 'View full article', i['url'] %></p>		
+	     </div>
+     <% end %>
+    </div>
+  </div>
+
+	

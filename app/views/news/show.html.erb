@@ -1,3 +1,8 @@
-<h1>News#show</h1>
-<p>Find me in app/views/news/show.html.erb</p>
-`
+
+<% @both.each do |i| %>
+	<div class="well" id="news-feed">
+		<p><%= i['title'] %></p>
+		<p><%= i['abstract'] %></p>
+		<p><%= i['url'] %></p>
+	</div>
+<% end %> 

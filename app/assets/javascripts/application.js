@@ -12,5 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+
 //= require_tree .
+
+$(function(){
+	
+$(window).scroll(function(){
+   if($(window).scrollTop()<20){
+         $('.fader').stop(true,true).fadeIn("slow");
+   } else {
+         $('.fader').stop(true,true).fadeOut("slow");
+   }
+});
+})
