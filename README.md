@@ -8,12 +8,14 @@ Wireframes: ![Imgur](http://i.imgur.com/jUxGLO2.jpg?1)
 
 Model Relationship: ![Imgur](http://i.imgur.com/jh2g0JT.jpg?1)
 
-MVP:
-
 Libraries used:
 * jQuery
-* System dependencies
-* Configuration
+* Ruby on Rails
+* Bootstrap
+
+Languages used:
+*Ruby
+*Javascript
 
 External API's used:
 * New York Times
@@ -21,8 +23,8 @@ External API's used:
 
 
 Future Developments:
-* Services (job queues, cache servers, search engines, etc.)
-* Deployment instructions
+* Compare different news outlets to each other
+* Implement live stream of tweets related to each current event
 
 Contributors:
 * Josh Baker: https://github.com/joshlbaker
