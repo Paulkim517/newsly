@@ -22,12 +22,15 @@
           </ul>
           <ul class="nav navbar-nav pull-right">
             <% if current_user %> 
-              <h3> Welcome <%= current_user.first_name %>&nbsp;&nbsp;<%= link_to "Log out",  logout_path, method: "destroy", class: "btn btn-primary" %></h3> 
+
+              <p><a class="navbar-header" href="/profile"><%= image_tag current_user.avatar.url(:thumb), class: "navbar-thumb" %>&nbsp;&nbsp;<%= current_user.first_name %></a>&nbsp;&nbsp;<%= link_to "Log out",  logout_path, method: "destroy", class: "btn btn-primary" %></p> 
+
+        
             <% else %> 
               <p><%= link_to "Sign Up", signup_path , class: "btn btn-primary" %>&nbsp;&nbsp;<%= link_to "Log In", login_path , class: "btn btn-primary" %></p>
             <% end %> 
           </ul>
+            
       </div><!-- /.navbar-collapse -->
     <!-- </div>/.container-fluid -->
   </nav>
-Add Comment Collapse

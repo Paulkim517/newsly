@@ -1,7 +1,7 @@
-source 'https://rubygems.org'
 
 
 source 'https://rubygems.org'
+
 #s3 bucket
 gem 'dotenv-rails', :groups => [:development, :test]
 gem 'aws-sdk'
@@ -33,9 +33,12 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
- 
+#post gres 
 gem 'pg'
+
+#vanity link
 gem 'friendly_id'
+#twitter api
 gem 'twitter'
 # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 gem 'byebug'
