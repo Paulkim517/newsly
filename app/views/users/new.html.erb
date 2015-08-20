@@ -1,7 +1,6 @@
 
 <div class="col-sm-4 col-sm-offset-4">
   <legend>Sign Up</legend>
-
    <%= form_for @user, :url => users_path, :html => { :multipart => true } do |f| %>
      <!-- first name field -->
      <%= f.label :first_name %>:
@@ -18,7 +17,9 @@
      <!-- avatar -->
      <%= f.label :avatar, "avatar" %>:
      <%= f.file_field :avatar %><br />
+     
+     <%= f.submit "Sign Up", class: "btn btn-primary" %>
   
-    
+     
   <% end %>
 </div>
