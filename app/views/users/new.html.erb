@@ -12,12 +12,14 @@
      <!-- email field -->
      <%= f.label :email %>:
      <%= f.email_field :email, class:"form-control" %><br />
-     <!-- password -->
+     <!-- password field -->
      <%= f.label :password %>:
      <%= f.password_field :password, class:"form-control" %><br />
-     <!-- avatar -->
+     <!-- avatar field -->
      <%= f.label :avatar, "avatar" %>:
      <%= f.file_field :avatar %><br />
+     <!-- signup button -->
+    <%= f.submit "Sign Up", class: "btn btn-primary" %>
   
     
   <% end %>

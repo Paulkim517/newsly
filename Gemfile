@@ -2,11 +2,11 @@ source 'https://rubygems.org'
 
 #s3 bucket
 gem 'dotenv-rails', :groups => [:development, :test]
-gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0'
 #ruby version
 ruby '2.0.0'
 #user can upload personal photos
-gem "paperclip"
+gem 'paperclip'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use sqlite3 as the database for Active Record

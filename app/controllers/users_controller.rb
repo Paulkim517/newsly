@@ -16,13 +16,14 @@ class UsersController < ApplicationController
     if current_user
       redirect_to profile_path
     else
-  	  user = User.new(user_params)
-  	  if user.save
-  		  session[:user_id] = user.id
+  	  @user = User.new(user_params)
+    
+  	  if @user.save
+  		  session[:user_id] = @user.id
   		  #redirect_to '/profile'
   		  redirect_to profile_path
   	  else
-        flash[:error] = user.errors.full_messages
+        flash[:error] = @user.errors.full_messages
   		  #redirect_to "/signup"
   		  redirect_to signup_path
   	  end

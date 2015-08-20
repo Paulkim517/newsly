@@ -4,16 +4,16 @@ has_secure_password
 
 # attr_accessible :avatar
   has_attached_file :avatar,
-                   :styles => { :medium => "150x150>", :thumb => "44x44#>" },
+                   :styles => { :medium => "150x150>", :thumb => "44x44#" },
                    :storage => :s3,
                    :s3_credentials => Proc.new { |a| a.instance.s3_credentials },
                    :path => "avatars/:id/:style/avatar.:extension",
-                   :default_url => "https://s3.amazonaws.com/<<BUCKET>>/defaults/default_avatar.png"
+                   :default_url => "https://s3.amazonaws.com/wdi1920/defaults/default_avatar.png"
 
 
    validates_attachment :avatar, :presence => true,
-                        :content_type => { :content_type => ["image/jpeg", "image/gif", "image/png"] },
-                        :size => { :in => 0..10.kilobytes }
+                        :content_type => { :content_type => ["image/jpeg", "image/gif", "image/png","image/jpg" ] },
+                        :size => { :in => 0..10000.kilobytes }
 
  extend FriendlyId
   friendly_id :first_name, use: :slugged
