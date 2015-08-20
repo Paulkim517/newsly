@@ -7,6 +7,8 @@ gem 'dotenv-rails', :groups => [:development, :test]
 
 #s3 bucket
 gem 'aws-sdk', '~> 2'
+# current time
+gem 'formatted_times'
 #user can upload personal photos
 gem "paperclip", "~> 4.3"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

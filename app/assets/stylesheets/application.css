@@ -1,22 +1,32 @@
 /* mapbox */
 
 .mapbox {
-  height: 500px;
+  height: 100%;
   width: 100%;
-
 }
 #navbar{
+}
+#breaking{
+	color:#888888;
+	opacity: 0.6;
+	float: left;
+	margin-top: 500px;
+	margin-left: 50px;
+	position: fixed;
 
 }
+#breaking:hover{
+	opacity: 1;
+}
 .jumbotron{
-	height:500px;
+	height:100%;
 	width: 100%;
 	background-color: #262626;
 	margin-top: -65px;
 }
 #map{
 	position: fixed;
-	z-index: 2;
+	/*z-index: 1;*/
 	/*width:1500px;*/
 }
 #about{
@@ -37,10 +47,14 @@
 	font-size: 25px;
 	font-weight: bold;
 }
+#brand:hover{
+	color:white;
+}
 #nav{
 	background-color: #262626;
 	color:#FB4505;
 	z-index: 2;
+	border: none;
 }
 body{
 	/*background-image: url('subtle.png');*/
@@ -49,27 +63,51 @@ body{
   padding-top: 70px; 
 	/*overflow: hidden;*/
 }
-.well{
-	opacity: 0.4;
+.panel-default{
+	opacity: 0.8;
+	background-color: #262626;
+	color:white;
+}
+.panel-default:hover{
+	opacity: 0.9;
 }
 .btn-primary{
 	margin-top: 10px;
+}
+#news{
+	float:right;
+	margin-top: 1000px;
+}
+#p{
+	font-size: 16px;
+}
+#linkp{
+	font-size: 16px;
+	text-align: right;
+}
+#tit{
+	font-size: 18px;
 }
 #news-feed{
 	z-index: 1;
 	/*background: #FDA282;*/
 	/*color:white;*/
+	/*margin-top: 60px;*/
+	vertical-align:right;
 	cursor: pointer;
 	transition-property: background;
-	transition-duration: 3s;
+	transition-duration: 1s;
 	transition-timing-function: linear;
+
 	}
 	#news-feed:hover {
-	  background: white;
+	  background: #E6E6E6;
 	  color:black;
-	  opacity: 0.9;
+	  opacity: 1;
 	}
 }
+
+
 /*.marker-symbol:hover{
 	color:black;
 }*/

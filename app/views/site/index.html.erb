@@ -4,18 +4,24 @@
   	</div>
   </div>
 </div>
-  <div class="container fluid">
-    <div class="col-md-12" id="news">
-     <h2>NEWS FEED:</h2>
-  	 <% @both.each do |i| %>
-	     <div class="well" id="news-feed">
-		     <h3><%= i['title'] %></h3>
-		     <p><%= i['abstract'] %></p>
-		     <p><%= link_to 'View full article', i['url'] %></p>		
-	     </div>
-     <% end %>
+  <!-- <div class="container"> -->
+    <!-- <div class=".col-md-8">
+    </div> -->
+  <h2 id="breaking"><%= @date.strftime("%B %d, %Y") %></h2>
+    <div class="col-md-4" id="news">
+      <% @both.each do |i| %>
+      <div class="panel panel-default" id="news-feed">
+        <div class="panel-heading">
+          <h3 class="panel-title" id="tit"><%= i['title'] %></h3>
+        </div>
+        <div class="panel-body">
+          <p id="p"><%= i['abstract'] %> <br><p id="linkp"><%= link_to 'View Article', i['url'] %></p></p>
+        </div>
+      </div>
+      <% end %>
     </div>
-  </div>
-</div>
+  <!-- </div> -->
+
+
 
 	

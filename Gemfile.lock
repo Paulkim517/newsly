@@ -75,6 +75,7 @@ GEM
       activesupport (>= 3.0.0)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
+    formatted_times (0.0.4)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
     globalid (0.3.6)
@@ -208,6 +209,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   dotenv-rails
   factory_girl
+  formatted_times
   friendly_id
   httparty
   jbuilder (~> 2.0)
