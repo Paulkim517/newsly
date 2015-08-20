@@ -1,14 +1,13 @@
-
-
 source 'https://rubygems.org'
+#ruby version
+ruby '2.0.0'
 
 #s3 bucket
 # current time
 gem 'formatted_times'
 gem 'dotenv-rails', :groups => [:development, :test]
 gem 'aws-sdk', '< 2.0'
-#ruby version
-ruby '2.0.0'
+
 #user can upload personal photos
 gem 'paperclip'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -48,7 +47,9 @@ gem 'byebug'
 gem 'web-console', '~> 2.0'
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring'
+
 gem 'factory_girl'
+
 group :production do
  	gem 'rails_12factor'
 end
