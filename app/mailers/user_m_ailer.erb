@@ -1,9 +1,3 @@
-class UserMAiler < ApplicationMailer
-	default from: "me@gmail.com"
-
-	def welcome_email(user)
-	   @user = user
-	   @url = 'http://www.http://newsli.herokuapp.com/'
-	   mail(to: @user.email, subject: 'test welcome email')
-	end
+class UserMAiler<ApplicationMailer
+	
 end
