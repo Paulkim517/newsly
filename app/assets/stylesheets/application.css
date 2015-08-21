@@ -1,4 +1,5 @@
 /* mapbox */
+@import "animate";
 
 .mapbox {
   height: 100%;
@@ -252,3 +253,4 @@ legend{
 section { padding: 5% 15%; margin: 0 auto;}
 
 
+*= require animate

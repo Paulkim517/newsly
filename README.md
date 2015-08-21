@@ -1,8 +1,12 @@
 Newsly
 ==============
 
-**Description**: Newsly helps you become more globally minded. Our web app visualizes the most recent and breaking news as it happens by plotting points on the locations where the events are taking places. 
+**Description:** Newsly helps you become more globally minded. Our web app visualizes the most recent and breaking news as it happens by plotting points on the locations where the events are taking places. 
 
+**User Stories:** 
+* Users can go to Newsly home page and see the most recent news and it's location plotted on a map. 
+* Users can got to Newsly signup page and sign up for an account. 
+* Users can go to Newsly login page and log in to their accounts.
 
 **Link to site:** newsli.herokuapp.com
 
@@ -27,6 +31,8 @@ Newsly
 **Future Developments:**
 * Compare different news outlets to each other
 * Implement live stream of tweets related to each current event
+* Account holders can pay to have news outlet preferences
+* Different radio news broadcasts on map
 
 **Contributors:**
 * Josh Baker: https://github.com/joshlbaker
