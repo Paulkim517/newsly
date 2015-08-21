@@ -6,12 +6,12 @@ ruby '2.0.0'
 gem 'formatted_times'
 
 gem 'dotenv-rails', :groups => [:development, :test]
-
+#s3
 gem 'aws-sdk', '< 2.0'
-
 #user can upload personal photos
 gem 'paperclip'
-
+#animate
+gem "animate"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 
