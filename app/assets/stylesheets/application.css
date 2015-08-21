@@ -1,6 +1,5 @@
 /* mapbox */
 @import "animate";
-
 .mapbox {
   height: 100%;
   width: 100%;
@@ -20,8 +19,7 @@ li{
 }
 .sharefb:hover{
 	opacity: 2;
-	transform: scale(1.1);
-
+	transform: scale(2.2);
 }
 .sharetw{
 	float: left;
@@ -34,8 +32,7 @@ li{
 }
 .sharetw:hover{
 	opacity: 2;
-	transform: scale(1.1);
-
+	transform: scale(2.2);
 }
 #breaking{
 	color:#888888;
@@ -44,9 +41,7 @@ li{
 	margin-top: 600px;
 	margin-left: 10px;
 	position: fixed;
-
 }
-
 #breaking:hover{
 	opacity: 1;
 }
@@ -56,7 +51,6 @@ li{
 	background-color: #262626;
 	margin-top: -65px;
 }
-
 #auth{
 	margin-top: 8px;
 }
@@ -99,7 +93,6 @@ li{
 	z-index: 2;
 	border: none;
 	position: fixed !important;
-
 }
 #mapjumbo{
 	height: 400px;
@@ -120,10 +113,10 @@ body{
 }
 .share{
 	z-index: -2;
-
 }
 .panel-default{
 	opacity: 0.8;
+	margin-left: 65px;
 	background-color: #262626;
 	color:white;
 }
@@ -135,7 +128,7 @@ body{
 }
 #news{
 	float:right;
-	margin-top: 750px;
+	margin-top: 625px;
 }
 #news2{
 	float:right;
@@ -162,15 +155,13 @@ body{
 	transition-property: background;
 	transition-duration: 1s;
 	transition-timing-function: linear;
-
 	}
 	#news-feed:hover {
-	  /*background: #E6E6E6;
-	  color:black;*/
+	  /*background: #E6E6E6;*/
+	  /*color:black;*/
 	  opacity: 1;
 	}
-
-
+}
 /*.marker-symbol:hover{
 	color:black;
 }*/
@@ -179,21 +170,20 @@ legend{
 }
 #user_info{
 	color:white;
+	max-width: 100%;
 	position: fixed;
 	z-index: 2;
 }
-
 .navbar-thumb{
 	border-radius: 100%;
 }
 .navbar {
 	background: #fff;
 	overflow: hidden;
-	width: 420px;
+	width: 400px;
 	
 	box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.2);
 }
-
 .navbar li p{
 	width: 120px; border-left: 5px solid #FB4505;
 	float: left;
@@ -214,7 +204,7 @@ legend{
 	-o-transition: all 0.1s ease-in;
 }
 .navbar li:hover {
-	background: #FB4505;
+	background: white;
 	border-left: 5px solid #000;
 }
 .navbar li:hover p {
@@ -235,8 +225,15 @@ legend{
 	position: fixed;
 	width:150px;
 }
+#profile-news{
+	color:white;
+	max-width: 100%;
+	position: relative;
+	z-index: 2;
+
+}
 #map > div.leaflet-map-pane > div.leaflet-objects-pane > div.leaflet-marker-pane{
-	animation-duration: 3s;
+	animation-duration: 4s;
 	animation-name: fadeIn;
 }
 @-webkit-keyframes fadeIn {
@@ -281,6 +278,5 @@ legend{
 	width:100%;
 }
 section { padding: 5% 15%; margin: 0 auto;}
-
-
 *= require animate
+Add Comment

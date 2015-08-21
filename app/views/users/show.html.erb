@@ -1,13 +1,15 @@
+ <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 
 <div class="container">
 	<div class="row">    
-		<div class="col-md-2">
-			<div class= "container" id="user_info">
+		<div class="col-md-2" >
+			<div class="container" id="user_info">
 				<h3><%= current_user.first_name %></h3>
 				<h4>Member since:<br> <%= localize(current_user.created_at, :format => '%m/%d/%Y') %></h4>
-				<%= image_tag current_user.avatar.url(:medium), class: "med" %>
+				<%= image_tag current_user.avatar.url(:medium), class: "img-responsive" %>
 			</div> 
 		</div>
+    <div class="container" id="profile-news">
 	    <div class="col-md-5" id="news2">
 			<h2 id="high">World</h2>
       <% @world['results'].each do |i| %>
@@ -38,3 +40,4 @@
         </div>
 		</div>
 	</div>
+</div>

@@ -12,7 +12,7 @@
     </div> -->
   <div class="sharefb animated slideInUp ">
     <ul>
-      <li><a href="https://www.facebook.com/sharer/sharer.php?u=newsli.herokuapp.com" target="_blank" class="fb-share-button"  data-layout="button"><img src=<%= asset_path "facebook.png"%> alt="Share newsly" width="42" height="42" border="0"></a></li><br>
+      <li><a href="https://www.facebook.com/sharer/sharer.php?u=newsli.herokuapp.com" target="_blank" class="fb-share-button"  data-layout="button"><img src=<%= asset_path"facebook.png"%> alt="Share newsly" width="42" height="42" border="0"></a></li><br>
     <ul>  
   </div>
   <div class="sharetw animated slideInUp">
@@ -25,7 +25,7 @@
 
     <div class="col-md-4" id="news">
       <% @both.each do |i| %>
-      <div class="panel panel-default" id="news-feed">
+      <div class="panel panel-default animated slideInUp" id="news-feed">
         <div class="panel-heading">
           <h3 class="panel-title" id="tit"><%= i['title'] %></h3>
         </div>
