@@ -1,11 +1,29 @@
+
+
+
 <div class="row">
-  <div class="jumbotron mapbox" id="map"></div>
+  <div class="jumbotron mapbox" id="map">
+  </div>
+  
 </div>
+
   
   <!-- <div class="container"> -->
     <!-- <div class=".col-md-8">
     </div> -->
-  <h2 id="breaking"><%= @date.strftime("%B %d, %Y") %></h2>
+  <div class="sharefb">
+    <ul>
+      <li><a href="https://www.facebook.com/sharer/sharer.php?u=newsli.herokuapp.com" target="_blank" class="fb-share-button"  data-layout="button"><img src=<%= asset_path "facebook.png"%> alt="Share newsly" width="42" height="42" border="0"></a></li><br>
+    <ul>  
+  </div>
+  <div class="sharetw">
+    <ul>
+      <!-- twitter button + redirect to twitter page -->
+      <li><a href="https://twitter.com/share/" class="twitter-share-button" data-url="http://newsli.herokuapp.com" data-via="sahash4" data-layout="button"><img src=<%= asset_path"twitter.png"%> alt="Share newsly" width="42" height="42" border="0"></a></li>
+    </ul>
+  </div>
+
+
     <div class="col-md-4" id="news">
       <% @both.each do |i| %>
       <div class="panel panel-default" id="news-feed">
@@ -18,3 +36,7 @@
       </div>
       <% end %>
     </div>
+
+
+
+

@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+#ruby version
 ruby '2.0.0'
 
 # current time
@@ -75,6 +75,7 @@ gem 'web-console', '~> 2.0'
 gem 'spring'
 
 gem 'factory_girl'
+
 
 end
 
