@@ -1,4 +1,5 @@
 /* mapbox */
+@import "animate";
 
 .mapbox {
   height: 100%;
@@ -134,7 +135,7 @@ body{
 }
 #news{
 	float:right;
-	margin-top: 1000px;
+	margin-top: 750px;
 }
 #news2{
 	float:right;
@@ -234,6 +235,37 @@ legend{
 	position: fixed;
 	width:150px;
 }
+#map > div.leaflet-map-pane > div.leaflet-objects-pane > div.leaflet-marker-pane{
+	animation-duration: 3s;
+	animation-name: fadeIn;
+}
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+	 
+	@-webkit-keyframes pulse {
+	    0% { -webkit-transform: scale(1); }
+	    50% { -webkit-transform: scale(1.1); }
+	    100% { -webkit-transform: scale(1); }
+	}
+	@keyframes pulse {
+	    0% { transform: scale(1); }
+	    50% { transform: scale(1.1); }
+	    100% { transform: scale(1); }
+	}
+	.pulse {
+	    -webkit-animation-name: pulse;
+	    animation-name: pulse;
+	}
 #high{
 	color: white;
 	text-align: center;
@@ -251,3 +283,4 @@ legend{
 section { padding: 5% 15%; margin: 0 auto;}
 
 
+*= require animate
