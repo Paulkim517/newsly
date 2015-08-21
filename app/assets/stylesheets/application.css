@@ -154,7 +154,7 @@ body{
 	/*background: #FDA282;*/
 	/*color:white;*/
 	/*margin-top: 60px;*/
-	background: #F5D0A9;
+	background: #E6E6E6;
 	color:black;
 	vertical-align:right;
 	cursor: pointer;
@@ -164,8 +164,8 @@ body{
 
 	}
 	#news-feed:hover {
-	  /*background: #E6E6E6;*/
-	  /*color:black;*/
+	  /*background: #E6E6E6;
+	  color:black;*/
 	  opacity: 1;
 	}
 
