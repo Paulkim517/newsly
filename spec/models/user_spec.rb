@@ -6,10 +6,10 @@ RSpec.describe User, type: :model do
  end
 
 
-it "returns a contact's full name as a string" do
- user = User.new(first_name: 'Rakesh', last_name: 'Shrestha')
- expect(user.full_name).to eq('Rakesh Shrestha')
-end
+# it "returns a contact's full name as a string" do
+#  user = User.new(first_name: 'Rakesh', last_name: 'Shrestha')
+#  expect(user.full_name).to eq('Rakesh Shrestha')
+# end
 
 
 it "should not be valid without a password" do
@@ -19,5 +19,5 @@ end
 
 
 
-end 
+# end 
 end
