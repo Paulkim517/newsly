@@ -17,7 +17,7 @@ class UsersController < ApplicationController
       redirect_to profile_path
     else
   	  @user = User.new(user_params)
-      respond_to do |format|
+      # respond_to do |format|
   	    if @user.save
   		    session[:user_id] = @user.id
           #POST /user
@@ -32,7 +32,7 @@ class UsersController < ApplicationController
   		    #redirect_to "/signup"
   		    redirect_to signup_path
   	    end
-      end
+      # end
     end
   end
  
