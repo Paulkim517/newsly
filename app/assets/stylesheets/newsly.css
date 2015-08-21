@@ -278,4 +278,4 @@ legend{
 	width:100%;
 }
 section { padding: 5% 15%; margin: 0 auto;}
-*= require animate
+*= require animate;
