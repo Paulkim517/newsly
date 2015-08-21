@@ -27,7 +27,7 @@ li{
 	opacity: 0.8;
 	position: inline;
 	margin-top: 600px;
-	margin-left: 40px;
+	margin-left: 70px;
 	position: fixed;
 	transition: all .2s ease-in-out; 
 }
@@ -154,7 +154,7 @@ body{
 	/*background: #FDA282;*/
 	/*color:white;*/
 	/*margin-top: 60px;*/
-	background: #E6E6E6;
+	background: #F5D0A9;
 	color:black;
 	vertical-align:right;
 	cursor: pointer;
