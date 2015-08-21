@@ -20,7 +20,7 @@ class UsersController < ApplicationController
     
   	  if @user.save
   		  session[:user_id] = @user.id
-        UserMailer.welcome_email(@user).deliver
+        # UserMailer.welcome_email(@user).deliver
   		  #redirect_to '/profile'
   		  redirect_to profile_path
   	  else
