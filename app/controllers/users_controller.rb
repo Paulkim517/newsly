@@ -17,22 +17,16 @@ class UsersController < ApplicationController
       redirect_to profile_path
     else
   	  @user = User.new(user_params)
-      # respond_to do |format|
-  	    if @user.save
-  		    session[:user_id] = @user.id
-          #POST /user
-          #POST /users.json
-          # tell the UserMailer to send a welcome Email after save
-          UserMailer.welcome_email(@user).deliver
-
-    		  #redirect_to '/profile'
-  		    redirect_to profile_path
-  	    else
-          flash[:error] = @user.errors.full_messages
-  		    #redirect_to "/signup"
-  		    redirect_to signup_path
-  	    end
-      # end
+    
+  	  if @user.save
+  		  session[:user_id] = @user.id
+  		  #redirect_to '/profile'
+  		  redirect_to profile_path
+  	  else
+        flash[:error] = @user.errors.full_messages
+  		  #redirect_to "/signup"
+  		  redirect_to signup_path
+  	  end
     end
   end
  

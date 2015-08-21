@@ -14,6 +14,7 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
+
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default_url_options = { :host => 'http://www.newsli.herokuapp.com/' }
 
@@ -27,6 +28,7 @@ Rails.application.configure do
     user_name: 'newsly.corporate@gmail.com',
     password: 'newsly123'
   }
+
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
