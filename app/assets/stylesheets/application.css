@@ -135,7 +135,7 @@ body{
 }
 #news{
 	float:right;
-	margin-top: 1000px;
+	margin-top: 550px;
 }
 #news2{
 	float:right;
@@ -237,7 +237,7 @@ legend{
 	width:150px;
 }
 #map > div.leaflet-map-pane > div.leaflet-objects-pane > div.leaflet-marker-pane{
-	animation-duration: 3s;
+	animation-duration: 4s;
 	animation-name: fadeIn;
 }
 @-webkit-keyframes fadeIn {
