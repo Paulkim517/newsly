@@ -234,8 +234,8 @@ legend{
 
 }
 #map > div.leaflet-map-pane > div.leaflet-objects-pane > div.leaflet-marker-pane{
-	animation-duration: 4s;
-	animation-name: fadeIn;
+	animation-duration: 2s;
+	animation-name: pulse;
 }
 @-webkit-keyframes fadeIn {
     0% {opacity: 0;}

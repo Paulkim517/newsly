@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
  #sessions routes
  get "/login", to: "sessions#new"
- post "/logout", to: "sessions#destroy"
+ get "/logout", to: "sessions#destroy"
  resources :sessions, only: [:create]
 
  #results
